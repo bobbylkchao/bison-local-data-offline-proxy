@@ -1,11 +1,11 @@
-# bison-local-data-middleware
-This opensource project is the local data request middleware.
+# bison-local-data-proxy
+This opensource project is the local data request proxy.
 
 Written by TypeScript, is used to implement offline browsing of the app.
 
-The data middleware will be responsible for data request, creation, destruction and expiration detection.
+The data proxy will be responsible for data request, creation, destruction and expiration detection.
 
-We only need to define the data model and leave the rest to the middleware!
+We only need to define the data model and leave the rest to the proxy!
 
 **>>> Currently based on Expo <<<**
 
@@ -27,30 +27,30 @@ https://www.linkedin.com/in/bobbylkchao/
 
 ## Install Steps
 
-1. git clone https://github.com/bobbylkchao/bison-local-data-middleware.git
-2. cd bison-local-data-middleware/middleware
+1. git clone https://github.com/bobbylkchao/bison-local-offline-proxy.git
+2. cd bison-local-data-offline-proxy/src
 3. npm i
 4. Configure the data model in model.config.js
-5. In your code, use `import { middlewareGetFullData, middlewareGetIncrementalData, middlewareGetMoreData, middlewareCheckDataExpired } from "middleware"`
+5. In your code, use `import { proxyGetFullData, proxyGetIncrementalData, proxyGetMoreData, proxyCheckDataExpired } from "proxy"`
 
 ## Core methods introduction
 
-middlewareGetFullData(): Get full data
+proxyGetFullData(): Get full data
 
-middlewareGetIncrementalData()(): Get incremental data
+proxyGetIncrementalData()(): Get incremental data
 
-middlewareGetMoreData(): Get more data
+proxyGetMoreData(): Get more data
 
-middlewareCheckDataExpired(): Check data expired status
+proxyCheckDataExpired(): Check data expired status
 
 ## How to use core methods?
 
-Please read interface [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-middleware/blob/main/middleware/interfaces.ts), there are code comments on the interface.
+Please read interface [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-offlin-proxy/blob/main/src/interfaces.ts), there are code comments on the interface.
 
 ## Usage Example
 
 ```
-const checkLocalDataExpiredStatus = await middlewareCheckDataExpired('weatherandrating');
+const checkLocalDataExpiredStatus = await proxyCheckDataExpired('weatherandrating');
 let paramByPass;
 if(checkLocalDataExpiredStatus){
   // Local data has expired
@@ -60,7 +60,7 @@ if(checkLocalDataExpiredStatus){
   paramByPass = false;
 }
 
-middlewareGetFullData({
+proxyGetFullData({
   tableName: 'weatherandrating',
   bypass: paramByPass,
 }, (r:any) => {
