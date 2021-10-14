@@ -31,7 +31,7 @@ https://www.linkedin.com/in/bobbylkchao/
 2. cd bison-local-data-middleware/middleware
 3. npm i
 4. Configure the data model in model.config.js
-5. In your code, use `import { middlewareGetFullData, middlewareGetIncrementalData, middlewareGetMoreData, middlewareCheckDataExpired } from middleware`
+5. In your code, use `import { middlewareGetFullData, middlewareGetIncrementalData, middlewareGetMoreData, middlewareCheckDataExpired } from "middleware"`
 
 ## Export method introduction
 
