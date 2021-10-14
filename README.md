@@ -27,7 +27,7 @@ https://www.linkedin.com/in/bobbylkchao/
 
 ## Install Steps
 
-1. git clone https://github.com/bobbylkchao/bison-local-offline-proxy.git
+1. git clone https://github.com/bobbylkchao/bison-local-data-offline-proxy.git
 2. cd bison-local-data-offline-proxy/src
 3. npm i
 4. Configure the data model in model.config.js
