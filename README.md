@@ -33,19 +33,19 @@ https://www.linkedin.com/in/bobbylkchao/
 4. Configure the data model in model.config.js
 5. In your code, use `import { middlewareGetFullData, middlewareGetIncrementalData, middlewareGetMoreData, middlewareCheckDataExpired } from "middleware"`
 
-## Export method introduction
+## Core methods introduction
 
-middlewareGetFullData: Get full data
+middlewareGetFullData(): Get full data
 
-middlewareGetIncrementalData: Get incremental data
+middlewareGetIncrementalData()(): Get incremental data
 
-middlewareGetMoreData: Get more data
+middlewareGetMoreData(): Get more data
 
-middlewareCheckDataExpired: Check data expired status
+middlewareCheckDataExpired(): Check data expired status
 
-## How to use?
+## How to use core methods?
 
-Please read [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-middleware/blob/main/middleware/interfaces.ts), there are code comments on the interface.
+Please read interface [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-middleware/blob/main/middleware/interfaces.ts), there are code comments on the interface.
 
 ## Usage Example
 
