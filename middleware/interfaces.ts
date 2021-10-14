@@ -1,55 +1,119 @@
-interface MiddlewareGetFullDataInterface{
+/**
+ * Interface for Open Screen
+ */
+ interface OpenScreenInterface{
   /**
-   * 表名称
+   * Navigation routing status
+   * @usage import {useNavigation} from'@react-navigation/native'; const navigation = useNavigation();
    */
-  tableName: string;
+  navigation: any;
   /**
-   * 是否绕过本地
+   * Page route name
+   * Definition of each page name in @usage check routes/index.tsx
    */
-  bypass: boolean;
+  screenName:'Home' |'NewsHome' |'LocalHome' |'YellowHome' |'MeHome' |'NewsDetails' |'LocalDetails' |'YellowDetails' |'Publish' |'Search' |'LocalCate' |'Browser' | 'Test';
   /**
-   * 请求参数
+   * Page routing parameters
+   * @default {}
    */
   params?: object;
 }
 
-interface MiddlewareReturnInterface{
+/**
+ * Interface for Toast
+ */
+interface ToastPropsInterface{
   /**
-   * 返回code
-   * @desc 200代表成功, 500代表失败
+   * Toast content
    */
-  code: number;
+  message: string;
   /**
-   * 返回内容
+  * Toast type
+  * @default success
+  */
+  type?:'success' |'failed' |'warning';
+  /**
+   * Toast display time
+   * @default 1000 ms
    */
-  message: string | object | unknown;
+  time?: number;
+  /**
+   * showIcon whether to display the icon
+   * @default true
+   */
+  showIcon?: boolean;
 }
 
-interface MiddlewareGetIncrementalDataInterface{
+/**
+ * Interface for Alert
+ */
+interface AlerPropsInterface{
   /**
-   * 表名称
+   * Alert title
+   * @default prompt
    */
-  tableName: string;
+  title?: string;
   /**
-  * 请求参数
-  */
-  params?: object;
+   * Alert content
+   */
+  msg: string;
+  /**
+   * Alert button text
+   * @default OK
+   */
+  okBtnText?: string;
 }
 
-interface MiddlewareGetMoreDataInterface{
+/**
+ * Interface for Share
+ */
+interface ShareInterface{
   /**
-   * 表名称
+   * title of the message, Android ONLY
+   * @default CBRLife can live
    */
-  tableName: string;
+  title?: string;
+   /**
+   * a message to share
+   * @default CBRLife can live
+   */
+  message: string;
+   /**
+   * an URL to share
+   */
+  url: string;
+}
+
+/**
+ * Interface for sendSMS
+ */
+interface SendSMSInterface{
   /**
-  * 请求参数
-  */
-  params?: object | any;
+   * content of SMS
+   */
+  content: string;
+   /**
+   * phone number to receive SMS
+   * @default''
+   */
+  number?: string;
+}
+
+/**
+ * Interface for makeCall
+ */
+interface MakeCallInterface{
+  /**
+   * phone number
+   */
+  number: number;
 }
 
 export {
-  MiddlewareGetFullDataInterface,
-  MiddlewareReturnInterface,
-  MiddlewareGetIncrementalDataInterface,
-  MiddlewareGetMoreDataInterface,
+  ToastPropsInterface,
+  AlerPropsInterface,
+  OpenScreenInterface,
+  ShareInterface,
+  SendSMSInterface,
+  MakeCallInterface,
 };
