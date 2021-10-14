@@ -45,7 +45,7 @@ middlewareCheckDataExpired: Check data expired status
 
 ## How to use?
 
-Please read interfaces.ts, there are code comments on the interface.
+Please read [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-middleware/blob/main/middleware/interfaces.ts), there are code comments on the interface.
 
 ## Usage Example
 
