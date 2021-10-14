@@ -1,119 +1,55 @@
-/**
- * Interface for Open Screen
- */
- interface OpenScreenInterface{
+interface MiddlewareGetFullDataInterface{
   /**
-   * Navigation routing status
-   * @usage import {useNavigation} from'@react-navigation/native'; const navigation = useNavigation();
+   * Table name
    */
-  navigation: any;
+  tableName: string;
   /**
-   * Page route name
-   * Definition of each page name in @usage check routes/index.tsx
+   * Whether to bypass the local
    */
-  screenName:'Home' |'NewsHome' |'LocalHome' |'YellowHome' |'MeHome' |'NewsDetails' |'LocalDetails' |'YellowDetails' |'Publish' |'Search' |'LocalCate' |'Browser' | 'Test';
+  bypass: boolean;
   /**
-   * Page routing parameters
-   * @default {}
+   * Request parameters
    */
   params?: object;
 }
 
-/**
- * Interface for Toast
- */
-interface ToastPropsInterface{
+interface MiddlewareReturnInterface{
   /**
-   * Toast content
+   * Return code
+   * @desc 200 means success, 500 means failure
    */
-  message: string;
+  code: number;
   /**
-  * Toast type
-  * @default success
+   * Return content
+   */
+  message: string | object | unknown;
+}
+
+interface MiddlewareGetIncrementalDataInterface{
+  /**
+   * Table name
+   */
+  tableName: string;
+  /**
+  * Request parameters
   */
-  type?:'success' |'failed' |'warning';
-  /**
-   * Toast display time
-   * @default 1000 ms
-   */
-  time?: number;
-  /**
-   * showIcon whether to display the icon
-   * @default true
-   */
-  showIcon?: boolean;
+  params?: object;
 }
 
-/**
- * Interface for Alert
- */
-interface AlerPropsInterface{
+interface MiddlewareGetMoreDataInterface{
   /**
-   * Alert title
-   * @default prompt
+   * Table name
    */
-  title?: string;
+  tableName: string;
   /**
-   * Alert content
-   */
-  msg: string;
-  /**
-   * Alert button text
-   * @default OK
-   */
-  okBtnText?: string;
-}
-
-/**
- * Interface for Share
- */
-interface ShareInterface{
-  /**
-   * title of the message, Android ONLY
-   * @default CBRLife can live
-   */
-  title?: string;
-   /**
-   * a message to share
-   * @default CBRLife can live
-   */
-  message: string;
-   /**
-   * an URL to share
-   */
-  url: string;
-}
-
-/**
- * Interface for sendSMS
- */
-interface SendSMSInterface{
-  /**
-   * content of SMS
-   */
-  content: string;
-   /**
-   * phone number to receive SMS
-   * @default''
-   */
-  number?: string;
-}
-
-/**
- * Interface for makeCall
- */
-interface MakeCallInterface{
-  /**
-   * phone number
-   */
-  number: number;
+  * Request parameters
+  */
+  params?: object | any;
 }
 
 export {
-  ToastPropsInterface,
-  AlerPropsInterface,
-  OpenScreenInterface,
-  ShareInterface,
-  SendSMSInterface,
-  MakeCallInterface,
+  MiddlewareGetFullDataInterface,
+  MiddlewareReturnInterface,
+  MiddlewareGetIncrementalDataInterface,
+  MiddlewareGetMoreDataInterface,
 };
