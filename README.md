@@ -5,7 +5,7 @@ Written by TypeScript, is used to implement offline browsing of the app.
 
 The data proxy will be responsible for data request, creation, destruction and expiration detection.
 
-We only need to define the data model and leave the rest to the proxy!
+We only need to define the data model and leave the rest to the proxy! Even without network!
 
 **>>> Currently based on Expo <<<**
 
