@@ -1,4 +1,4 @@
-# bison-local-data-proxy
+# bison-local-data-offline-proxy
 This opensource project is the local data request proxy.
 
 Written by TypeScript, is used to implement offline browsing of the app.
