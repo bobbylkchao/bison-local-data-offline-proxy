@@ -45,7 +45,7 @@ proxyCheckDataExpired(): Check data expired status
 
 ## How to use core methods?
 
-Please read interface [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-offlin-proxy/blob/main/src/interfaces.ts), there are code comments on the interface.
+Please read interface [interfaces.ts](https://github.com/bobbylkchao/bison-local-data-offline-proxy/blob/main/src/interfaces.ts), there are code comments on the interface.
 
 ## Usage Example
 
