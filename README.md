@@ -19,11 +19,11 @@ https://www.linkedin.com/in/bobbylkchao/
 
 ## Integration diagram
 
-![ScreenShot](https://raw.githubusercontent.com/bobbylkchao/bison-local-data-middleware/main/README/1.png)
+![ScreenShot](https://raw.githubusercontent.com/bobbylkchao/bison-local-data-offline-proxy/main/README/1.png)
 
 ## How it works?
 
-![ScreenShot](https://raw.githubusercontent.com/bobbylkchao/bison-local-data-middleware/main/README/2.png)
+![ScreenShot](https://raw.githubusercontent.com/bobbylkchao/bison-local-data-offline-proxy/main/README/2.png)
 
 ## Install Steps
 
