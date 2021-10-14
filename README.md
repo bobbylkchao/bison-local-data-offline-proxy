@@ -43,6 +43,10 @@ middlewareGetMoreData: Get more data
 
 middlewareCheckDataExpired: Check data expired status
 
+## How to use?
+
+Please read interfaces.ts, there are code comments on the interface.
+
 ## Usage Example
 
 ```
