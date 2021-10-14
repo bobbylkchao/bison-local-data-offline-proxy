@@ -115,7 +115,7 @@ const middlewareGetFullData = async (props: MiddlewareGetFullDataInterface, call
 
       if(parseInt(remoteData.code) === 200){
         // If the code returned from the API is 200, update the data to the local
-        debugLog(`[DEBUG][Middleware]${props.tableName} 写入数据到本地数据表`);
+        debugLog(`[DEBUG][Middleware]${props.tableName} write data to the local data table`);
         middlewareUpdateLocalData(props.tableName, remoteData, () => {
           return callback ? callback({ code: 200, message: remoteData }) : null;
         });
@@ -175,7 +175,7 @@ const middlewareGetIncrementalData = async (props: MiddlewareGetIncrementalDataI
   const remoteData = await middlewareGetRemoteData(tableConfig.remoteAPILatest, props.tableName, props.params ? props.params : {});
   if(parseInt(remoteData.code) === 200){
     // If the code returned from the API is 200, update the data to the local
-    debugLog(`[DEBUG][Middleware]${props.tableName} 合并数据至本地数据表`);
+    debugLog(`[DEBUG][Middleware]${props.tableName} merge data to local data table`);
     await middlewareMergeLocalData(props.tableName, remoteData, 'top');
     return callback ? callback({ code: 200, message: remoteData }) : null;
   }
