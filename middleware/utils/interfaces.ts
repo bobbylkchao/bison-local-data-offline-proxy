@@ -1,19 +1,19 @@
 /**
  * Interface for Open Screen
  */
-interface OpenScreenInterface{
+ interface OpenScreenInterface{
   /**
-   * Navigation路由状态
-   * @usage import { useNavigation } from '@react-navigation/native'; const navigation = useNavigation();
+   * Navigation routing status
+   * @usage import {useNavigation} from'@react-navigation/native'; const navigation = useNavigation();
    */
   navigation: any;
   /**
-   * 页面路由名称
-   * @usage check routes/index.tsx中各页面名称定义
+   * Page route name
+   * Definition of each page name in @usage check routes/index.tsx
    */
-  screenName: 'Home' | 'NewsHome' | 'LocalHome' | 'YellowHome' | 'MeHome' | 'NewsDetails' | 'LocalDetails' | 'YellowDetails' | 'Publish' | 'Search' | 'LocalCate' | 'Browser' | 'Test';
+  screenName:'Home' |'NewsHome' |'LocalHome' |'YellowHome' |'MeHome' |'NewsDetails' |'LocalDetails' |'YellowDetails' |'Publish' |'Search' |'LocalCate' |'Browser' | 'Test';
   /**
-   * 页面路由参数
+   * Page routing parameters
    * @default {}
    */
   params?: object;
@@ -24,21 +24,21 @@ interface OpenScreenInterface{
  */
 interface ToastPropsInterface{
   /**
-   * Toast 内容
+   * Toast content
    */
   message: string;
   /**
-  * Toast 类型
+  * Toast type
   * @default success
   */
-  type?: 'success' | 'failed' | 'warning';
+  type?:'success' |'failed' |'warning';
   /**
-   * Toast 显示时间
+   * Toast display time
    * @default 1000 ms
    */
   time?: number;
   /**
-   * showIcon 是否显示图标
+   * showIcon whether to display the icon
    * @default true
    */
   showIcon?: boolean;
@@ -49,17 +49,17 @@ interface ToastPropsInterface{
  */
 interface AlerPropsInterface{
   /**
-   * Alert 标题
-   * @default 提示
+   * Alert title
+   * @default prompt
    */
   title?: string;
   /**
-   * Alert 内容
+   * Alert content
    */
   msg: string;
   /**
-   * Alert 按钮文字
-   * @default 好的
+   * Alert button text
+   * @default OK
    */
   okBtnText?: string;
 }
@@ -70,12 +70,12 @@ interface AlerPropsInterface{
 interface ShareInterface{
   /**
    * title of the message, Android ONLY
-   * @default CBRLife堪生活
+   * @default CBRLife can live
    */
   title?: string;
    /**
    * a message to share
-   * @default CBRLife堪生活
+   * @default CBRLife can live
    */
   message: string;
    /**
@@ -94,7 +94,7 @@ interface SendSMSInterface{
   content: string;
    /**
    * phone number to receive SMS
-   * @default ''
+   * @default''
    */
   number?: string;
 }
