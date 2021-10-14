@@ -1,0 +1,16 @@
+{
+  "name": "bison-local-data-offline-proxy",
+  "version": "1.0.0",
+  "description": "This opensource project is the local data request proxy. Written by TypeScript, is used to implement offline browsing of the app. The data proxy will be responsible for data request, creation, destruction and expiration detection. We only need to define the data model and leave the rest to the proxy!",
+  "author": "bobby chao (bobbylkchao@gmail.com)",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "expo-network": "^3.2.0",
+    "expo-sqlite": "^9.2.1"
+  }
+}

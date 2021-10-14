@@ -1,4 +1,4 @@
-interface MiddlewareGetFullDataInterface{
+interface ProxyGetFullDataInterface{
   /**
    * Table name
    */
@@ -13,7 +13,7 @@ interface MiddlewareGetFullDataInterface{
   params?: object;
 }
 
-interface MiddlewareReturnInterface{
+interface ProxyReturnInterface{
   /**
    * Return code
    * @desc 200 means success, 500 means failure
@@ -25,7 +25,7 @@ interface MiddlewareReturnInterface{
   message: string | object | unknown;
 }
 
-interface MiddlewareGetIncrementalDataInterface{
+interface ProxyGetIncrementalDataInterface{
   /**
    * Table name
    */
@@ -36,7 +36,7 @@ interface MiddlewareGetIncrementalDataInterface{
   params?: object;
 }
 
-interface MiddlewareGetMoreDataInterface{
+interface ProxyGetMoreDataInterface{
   /**
    * Table name
    */
@@ -48,8 +48,8 @@ interface MiddlewareGetMoreDataInterface{
 }
 
 export {
-  MiddlewareGetFullDataInterface,
-  MiddlewareReturnInterface,
-  MiddlewareGetIncrementalDataInterface,
-  MiddlewareGetMoreDataInterface,
+  ProxyGetFullDataInterface,
+  ProxyReturnInterface,
+  ProxyGetIncrementalDataInterface,
+  ProxyGetMoreDataInterface,
 };

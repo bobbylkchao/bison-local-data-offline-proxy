@@ -1,5 +1,5 @@
 /**
- * Middleware data model configuration
+ * Proxy data model configuration
  * @desc The front-end MVC is separated, and the data Model is configured separately in this file
  * @param {string} tableName Corresponding to the table name in the local database
  * @param {string} Create model corresponding table creation SQL
