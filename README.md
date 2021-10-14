@@ -7,6 +7,8 @@ The data middleware will be responsible for data request, creation, destruction 
 
 We only need to define the data model and leave the rest to the middleware!
 
+**>>> Currently based on Expo <<<**
+
 ## Author
 
 Bobby Chao
